@@ -1,0 +1,74 @@
+<section class="py-28 relative overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+
+  <div
+    class="absolute right-0 bottom-0 w-[400px] h-[400px] bg-yellow-500/10 rounded-full blur-[150px]">
+  </div>
+
+  <div class="container-luxury relative z-10">
+
+    <!-- HEADER -->
+
+    <div class="text-center mb-20"   >
+
+      <p class="uppercase tracking-[0.4em] text-yellow-500 text-sm mb-5">
+        Instagram
+      </p>
+
+      <h2
+        class="text-4xl md:text-6xl font-bold mb-6"
+        style="font-family:'Playfair Display', serif;">
+
+        Follow Our Luxury Journey
+
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto leading-8">
+
+        Discover timeless moments, elegant collections,
+        and luxury inspiration from our latest showcases.
+
+      </p>
+
+    </div>
+
+    <!-- IMAGE GRID -->
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+
+      @for(image of images; track image){
+
+      <div
+          
+        class="group relative overflow-hidden rounded-[30px]">
+
+        <img
+          [src]="image"
+          alt="Instagram Luxury Jewellery"
+          class="h-[220px] md:h-[320px] w-full object-cover group-hover:scale-110 smooth-transition"
+        />
+
+        <!-- OVERLAY -->
+
+        <div
+          class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 smooth-transition flex items-center justify-center">
+
+          <div
+            class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-2xl">
+
+            ✨
+
+          </div>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

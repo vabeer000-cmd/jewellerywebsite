@@ -1,0 +1,78 @@
+<section class="py-28 relative overflow-hidden">
+
+  <div
+    class="absolute left-0 bottom-0 w-[350px] h-[350px] bg-yellow-500/10 rounded-full blur-[140px]">
+  </div>
+
+  <div class="container-luxury relative z-10">
+
+    <!-- HEADER -->
+
+    <div class="text-center mb-20"    >
+
+      <p class="uppercase tracking-[0.4em] text-yellow-500 text-sm mb-5">
+        Testimonials
+      </p>
+
+      <h2
+        class="text-4xl md:text-6xl font-bold mb-6"
+        style="font-family:'Playfair Display', serif;">
+
+        What Our Clients Say
+
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto leading-8">
+
+        Trusted by customers who appreciate timeless luxury,
+        exceptional craftsmanship, and unforgettable elegance.
+
+      </p>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="grid lg:grid-cols-3 gap-8">
+
+      @for(item of testimonials; track item.name){
+
+      <div
+           
+        class="bg-white/5 border border-white/10 rounded-[35px] p-8 backdrop-blur-md hover:border-yellow-500/30 smooth-transition">
+
+        <div class="flex items-center gap-5 mb-8">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name"
+            class="w-16 h-16 rounded-full object-cover"
+          />
+
+          <div>
+
+            <h3 class="text-xl font-semibold">
+              {{ item.name }}
+            </h3>
+
+            <p class="text-yellow-500 text-sm">
+              {{ item.role }}
+            </p>
+
+          </div>
+
+        </div>
+
+        <p class="text-gray-300 leading-8">
+          "{{ item.review }}"
+        </p>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

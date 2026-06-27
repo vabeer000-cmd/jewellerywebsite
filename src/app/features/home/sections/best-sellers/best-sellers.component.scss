@@ -1,0 +1,229 @@
+:host {
+  display: block;
+}
+
+/* ===========================
+   VIEWPORT
+=========================== */
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 40px 0;
+}
+
+/* ===========================
+   TRACK
+=========================== */
+
+.carousel-track {
+
+  display: flex;
+  gap: 40px;
+
+  transition:
+    transform .8s cubic-bezier(.22, 1, .36, 1);
+
+  will-change: transform;
+
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+// .carousel-item {
+
+//   flex: 0 0 440px;
+
+//   transition:
+//     transform .6s ease,
+//     opacity .6s ease,
+//     filter .6s ease;
+
+//   opacity: .45;
+
+//   transform: scale(.84);
+
+//   filter: blur(2px);
+
+// }
+.carousel-item {
+
+  flex: 0 0 440px;
+
+  opacity: .45;
+
+  transform: scale(.82);
+
+  filter: blur(2px);
+
+  transform-origin: center center;
+
+}
+/* ===========================
+   ACTIVE CARD
+=========================== */
+
+.carousel-item.active {
+
+  opacity: 1;
+
+  transform: scale(1);
+
+  filter: blur(0);
+
+  z-index: 5;
+
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.carousel-item img {
+
+  transition:
+    transform .7s ease;
+
+}
+
+.carousel-item.active:hover img {
+
+  transform: scale(1.08);
+
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+.carousel-btn {
+
+  position: absolute;
+
+  top: 45%;
+
+  transform: translateY(-50%);
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(255,255,255,.15);
+
+  background: rgba(255,255,255,.08);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  font-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 100;
+
+  transition: .35s;
+
+}
+
+.carousel-btn:hover {
+
+  background: #d4af37;
+
+  color: black;
+
+  transform:
+    translateY(-50%)
+    scale(1.08);
+
+}
+
+.left-0 {
+
+  left: -25px;
+
+}
+
+.right-0 {
+
+  right: -25px;
+
+}
+
+/* ===========================
+   DOTS
+=========================== */
+
+.dot {
+
+  width: 10px;
+
+  height: 10px;
+
+  border-radius: 9999px;
+
+  background: rgba(255,255,255,.25);
+
+  transition: .4s;
+
+}
+
+.active-dot {
+
+  width: 38px;
+
+  background: #d4af37;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1024px){
+
+  .carousel-item{
+
+    flex:0 0 360px;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .carousel-item{
+
+    flex:0 0 88vw;
+
+  }
+
+  .carousel-btn{
+
+    width:50px;
+    height:50px;
+
+    font-size:22px;
+
+  }
+
+  .left-0{
+
+    left:5px;
+
+  }
+
+  .right-0{
+
+    right:5px;
+
+  }
+
+}

@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'swiper/css';
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #0B0B0B;
+  color: #F5F5F5;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body::before {
+
+  content: '';
+
+  position: fixed;
+
+  inset: 0;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(212,175,55,0.12),
+      transparent 30%),
+
+    radial-gradient(circle at bottom right,
+      rgba(255,215,0,0.08),
+      transparent 30%);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+}
+
+.container-luxury {
+  width: min(1400px, 90%);
+  margin: auto;
+}
+
+.gold-gradient {
+  background: linear-gradient(
+    135deg,
+    #D4AF37,
+    #FFD700,
+    #B8860B
+  );
+}
+
+.smooth-transition {
+  transition: all 0.4s ease;
+}

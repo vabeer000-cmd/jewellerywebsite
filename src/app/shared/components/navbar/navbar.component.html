@@ -1,0 +1,100 @@
+<header
+  class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10">
+
+  <div class="container-luxury flex items-center justify-between py-5">
+
+    <!-- LOGO -->
+
+    <div
+      class="text-2xl font-semibold tracking-[0.3em]"
+      style="font-family:'Playfair Display', serif;">
+
+      LUXE
+
+    </div>
+
+    <!-- DESKTOP NAV -->
+
+    <nav class="hidden md:flex items-center gap-10 uppercase text-sm tracking-widest">
+
+      <a routerLink="/home" class="hover:text-yellow-500 smooth-transition">
+        Home
+      </a>
+
+      <a routerLink="/collections" class="hover:text-yellow-500 smooth-transition">
+        Collections
+      </a>
+
+      <a routerLink="/about" class="hover:text-yellow-500 smooth-transition">
+        About
+      </a>
+
+      <a routerLink="/contact" class="hover:text-yellow-500 smooth-transition">
+        Contact
+      </a>
+
+    </nav>
+
+    <!-- MOBILE BUTTON -->
+
+    <button
+      (click)="toggleMenu()"
+      class="md:hidden text-3xl">
+
+      ☰
+
+    </button>
+
+  </div>
+
+</header>
+
+<!-- MOBILE MENU OVERLAY -->
+
+@if(isMenuOpen()){
+
+<div
+  class="fixed inset-0 bg-black/70 backdrop-blur-md z-40 md:hidden"
+  (click)="toggleMenu()">
+
+  <div
+    class="absolute top-0 right-0 h-full w-[75%] bg-[#111111] border-l border-white/10 p-10"
+    (click)="$event.stopPropagation()">
+
+    <div class="flex justify-end mb-10">
+
+      <button
+        class="text-3xl"
+        (click)="toggleMenu()">
+
+        ×
+
+      </button>
+
+    </div>
+
+    <nav class="flex flex-col gap-8 uppercase tracking-widest text-lg">
+
+      <a routerLink="/home" class="hover:text-yellow-500 smooth-transition"  (click)="closeMenu()">
+        Home 
+      </a>
+
+      <a routerLink="/collections" class="hover:text-yellow-500 smooth-transition"  (click)="closeMenu()">
+        Collections
+      </a>
+
+      <a routerLink="/about" class="hover:text-yellow-500 smooth-transition"  (click)="closeMenu()">
+        About
+      </a>
+
+      <a routerLink="/contact" class="hover:text-yellow-500 smooth-transition"  (click)="closeMenu()">
+        Contact
+      </a>
+
+    </nav>
+
+  </div>
+
+</div>
+
+}

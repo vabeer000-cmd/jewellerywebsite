@@ -1,0 +1,94 @@
+<section class="py-28 relative overflow-hidden">
+
+  <!-- BACKGROUND GLOW -->
+
+  <div
+    class="absolute top-0 left-0 w-[400px] h-[400px] bg-yellow-500/10 rounded-full blur-[140px]">
+  </div>
+
+  <div class="container-luxury relative z-10">
+
+    <!-- SECTION HEADER -->
+
+    <div class="text-center mb-20">
+
+      <p class="uppercase tracking-[0.4em] text-yellow-500 text-sm mb-5">
+        Collections
+      </p>
+
+      <h2
+        class="text-4xl md:text-6xl font-bold mb-6"
+        style="font-family:'Playfair Display', serif;">
+
+        Featured Collections
+
+      </h2>
+
+      <p class="text-gray-400 max-w-2xl mx-auto leading-8">
+
+        Explore curated jewellery collections designed with timeless elegance,
+        luxurious craftsmanship, and modern sophistication.
+
+      </p>
+
+    </div>
+
+    <!-- COLLECTION GRID -->
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      @for(collection of collections; track collection.title){
+
+      <div
+        class="group relative overflow-hidden rounded-[35px] cursor-pointer">
+
+        <!-- IMAGE -->
+
+        <img
+          [src]="collection.image"
+          [alt]="collection.title"
+          class="h-[500px] w-full object-cover group-hover:scale-110 smooth-transition"
+        />
+
+        <!-- DARK OVERLAY -->
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent">
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="absolute bottom-10 left-8 right-8">
+
+          <h3
+            class="text-3xl font-bold mb-4"
+            style="font-family:'Playfair Display', serif;">
+
+            {{ collection.title }}
+
+          </h3>
+
+          <p class="text-gray-300 mb-6 leading-7">
+
+            {{ collection.subtitle }}
+
+          </p>
+
+          <button
+            class="uppercase tracking-widest text-sm text-yellow-500">
+
+            Explore →
+
+          </button>
+
+        </div>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

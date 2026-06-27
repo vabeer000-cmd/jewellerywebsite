@@ -34,6 +34,7 @@
             "styles": [
               "src/styles.scss"
             ],
+            "baseHref": "/jewellerywebsite/",
             "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",

@@ -16,7 +16,7 @@ export class CollectionsComponent {
     {
       title: 'Diamond Collection',
       subtitle: 'Timeless brilliance crafted for elegance.',
-      image: '/images/muhammad-mousavi-5Lll5zmefSg-unsplash.jpg'
+      image: 'images/photo-1693833968509-78c08545a714.avif'
     },
     {
       title: 'Royal Gold',
